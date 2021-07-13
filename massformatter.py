@@ -39,7 +39,6 @@ print('''
   █████   ██    ██ ██████  ██ ████ ██ ███████    ██       ██    █████   ██████  
   ██      ██    ██ ██   ██ ██  ██  ██ ██   ██    ██       ██    ██      ██   ██ 
   ██       ██████  ██   ██ ██      ██ ██   ██    ██       ██    ███████ ██   ██ 
-
 ''')
 
 commandMap = {
@@ -77,7 +76,7 @@ def helpAction(commandMap):
 		print("    - " + c)
 
 while True:
-	newCommand = input("Listening:")
+	newCommand = input("\nListening:")
 	
 	if newCommand == "quit":
 		break
