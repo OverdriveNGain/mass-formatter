@@ -24,9 +24,9 @@ import pixels
 import filenameprint
 import jpgcompress
 
-validCommands = ["replacecolor", "autocrop", "resizer", "pdf2img", "img2pdf","gifmaker",
- "boxbackup", "boxrestore","separator","outliner","divider","masscrop","massrenamer","lighten",
- "flattenopacity", "retainmain", "timelapse","imagestitch", "boxclear","txt","pixels","filenameprint","help","jpgcompress", "pdfstitch"]
+# validCommands = ["replacecolor", "autocrop", "resizer", "pdf2img", "img2pdf","gifmaker",
+#  "boxbackup", "boxrestore","separator","outliner","divider","masscrop","massrenamer","lighten",
+#  "flattenopacity", "retainmain", "timelapse","imagestitch", "boxclear","txt","pixels","filenameprint","help","jpgcompress", "pdfstitch"]
 print('''
   ███    ███  █████  ███████ ███████
   ████  ████ ██   ██ ██      ██     
@@ -41,62 +41,48 @@ print('''
   ██       ██████  ██   ██ ██      ██ ██   ██    ██       ██    ███████ ██   ██ 
 
 ''')
+
+commandMap = {
+	"replacecolor": lambda : replacecolor.start(),
+	"autocrop": lambda : autocrop.start(),
+	"resizer": lambda : resizer.start(),
+	"pdf2img": lambda : pdf2img.pdf2img(),
+	"img2pdf": lambda : pdf2img.img2pdf(),
+	"gifmaker": lambda : gifmaker.start(),
+	"boxbackup": lambda : boxbackup.backup(),
+	"boxrestore": lambda : boxbackup.restore(),
+	"separator": lambda : separator.start(),
+	"outliner": lambda : outliner.start(),
+	"divider": lambda : divider.start(),
+	"masscrop": lambda : masscrop.start(),
+	"massrenamer": lambda : massrenamer.start(),
+	"lighten": lambda : lighten.start(),
+	"flattenopacity": lambda : flattenopacity.start(),
+	"retainmain": lambda : retainmain.start(),
+	"timelapse": lambda : timelapse.start(),
+	"imagestitch": lambda : imagestitch.start(),
+	"boxclear": lambda : boxbackup.clear(),
+	"txt": lambda : txt.start(),
+	"pixels": lambda : pixels.start(),
+	"filenameprint": lambda : filenameprint.start(),
+	"jpgcompress": lambda : jpgcompress.start(),
+	"pdfstitch": lambda : pdf2img.pdfstitch(),
+	"help": lambda : helpAction(commandMap),
+
+}
+
+def helpAction(commandMap):
+	print("    The valid commands are:")
+	for c in commandMap:
+		print("    - " + c)
+
 while True:
 	newCommand = input("Listening:")
+	
 	if newCommand == "quit":
 		break
 
-	if newCommand == "replacecolor":
-		replacecolor.start()
-	elif newCommand == "autocrop":
-		autocrop.start()
-	elif newCommand == "resizer":
-		resizer.start()
-	elif newCommand == "pdf2img":
-		pdf2img.pdf2img()
-	elif newCommand == "img2pdf":
-		pdf2img.img2pdf()
-	elif newCommand == "gifmaker":
-		gifmaker.start()
-	elif newCommand == "boxbackup":
-		boxbackup.backup()
-	elif newCommand == "boxrestore":
-		boxbackup.restore()
-	elif newCommand == "separator":
-		separator.start()
-	elif newCommand == "outliner":
-		outliner.start()
-	elif newCommand == "divider" :
-		divider.start()
-	elif newCommand == "masscrop" :
-		masscrop.start()
-	elif newCommand == "massrenamer" :
-		massrenamer.start()
-	elif newCommand == "lighten":
-		lighten.start()
-	elif newCommand == "flattenopacity":
-		flattenopacity.start()
-	elif newCommand == "retainmain":
-		retainmain.start()
-	elif newCommand == "timelapse":
-		timelapse.start()
-	elif newCommand == "imagestitch":
-		imagestitch.start()
-	elif newCommand == "boxclear":
-		boxbackup.clear()
-	elif newCommand == "txt":
-		txt.start()
-	elif newCommand == "pixels":
-		pixels.start()
-	elif newCommand == "filenameprint":
-		filenameprint.start()
-	elif newCommand == 'jpgcompress':
-		jpgcompress.start()
-	elif newCommand == 'pdfstitch':
-		pdf2img.pdfstitch()
-	elif newCommand == "help":
-		print("    The valid commands are:")
-		for c in validCommands:
-			print("    - " + c)
-	else:
+	try:
+		commandMap[newCommand]()
+	except KeyError:
 		print("Invalid command. Enter \'help\' for a list of valid commands")
