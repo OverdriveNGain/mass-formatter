@@ -66,12 +66,12 @@ commandMap = {
 	"boxbackup": 
 		{
 			"execute": lambda : boxbackup.backup(),
-			"desciption": "",
+			"desciption": "Performs a backup on the files currently in the box folder",
 		},
 	"boxrestore": 
 		{
 			"execute": lambda : boxbackup.restore(),
-			"desciption": "",
+			"desciption": "Restores the box folder with a previous box backup.",
 		},
 	"separator": 
 		{
