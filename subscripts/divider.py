@@ -49,24 +49,4 @@ def start():
 
 		else:
 			print("    Divide by cell size mode not yet implemented.")
-
-		# iterator += 1
-		# img = Image.open(indir + inputImage)
-		# pix = img.load()
-		# x, y = img.size
-		# for xi in range(x):
-		# 	for yi in range(y):
-		# 		if pix[xi, yi][3] != 0:
-		# 			if topmost > yi:
-		# 				topmost = yi
-		# 			if xi < leftmost:
-		# 				leftmost = xi
-		# 			if xi > rightmost:
-		# 				rightmost = xi
-		# 			if bottommost < yi:
-		# 				bottommost = yi
-
-		# img = img.crop((leftmost, topmost, rightmost, bottommost))
-		# print("({}/{}).".format(iterator, len(filenameList)), end = "")
-		# img.save(outdir + inputImage)
 	print("\n    Done!")
