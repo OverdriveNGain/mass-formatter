@@ -19,13 +19,6 @@ def GetFileList(mypath):
 def GetPdfList(mypath):
 	return [f for f in listdir(mypath) if (isfile(join(mypath, f)) and f[-3:] == "pdf")]
 def img2pdf():
-	# path = os.getcwd()
-	# indir = path + "\\box\\"
-	# outdir = path + "\\box\\"
-	# subPdfCount = int(input("    Enter sub PDF count:"))
-	# fileList = [Image.open(indir + i).convert('RGB') for i in GetFileList(indir)]
-	# fileList[0].save(outdir + "pdfExported.pdf", save_all = True, append_images = fileList[1:])
-	# print ("    Exported pdfExported.pdf!")
 	path = os.getcwd()
 	indir = path + "\\box\\"
 	outdir = path + "\\box\\"
@@ -106,19 +99,9 @@ def pdf2img():
 	print ("    Done")
 
 def pdfstitch():
-	# path = os.getcwd()
-	# indir = path + "\\box\\"
-	# outdir = path + "\\box\\"
-	# subPdfCount = int(input("    Enter sub PDF count:"))
-	# fileList = [Image.open(indir + i).convert('RGB') for i in GetFileList(indir)]
-	# fileList[0].save(outdir + "pdfExported.pdf", save_all = True, append_images = fileList[1:])
-	# print ("    Exported pdfExported.pdf!")
 	path = os.getcwd()
 	indir = path + "\\box\\"
 	outdir = path + "\\box\\"
-
-	# pdfList = []
-	# fileList = GetFileList(indir)
 	pdfList = GetFileList(indir)
 	pdfList.sort()
 	print("    Merging sub PDF files...")
