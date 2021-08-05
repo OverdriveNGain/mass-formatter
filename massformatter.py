@@ -141,7 +141,7 @@ commandMap = {
 	"pdfstitch": 
 		{
 			"execute": lambda : pdf2img.pdfstitch(),
-			"desciption": "",
+			"desciption": "Combines multiple pdf files into a single pdf file.",
 		},
 	"help": 
 		{
