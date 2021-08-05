@@ -1,28 +1,23 @@
-import sys
-import os
-pathname = os.path.dirname(sys.argv[0]).replace('\\','/')
-sys.path.append(pathname + '/subscripts')
-
-import replacecolor
-import autocrop
-import resizer
-import pdf2img
-import gifmaker
-import boxbackup
-import separator
-import divider
-import outliner
-import masscrop
-import massrenamer
-import lighten
-import flattenopacity
-import retainmain
-import timelapse
-import imagestitch
-import txt
-import pixels
-import filenameprint
-import jpgcompress
+from subscripts import replacecolor
+from subscripts import autocrop
+from subscripts import resizer
+from subscripts import pdf2img
+from subscripts import gifmaker
+from subscripts import boxbackup
+from subscripts import separator
+from subscripts import divider
+from subscripts import outliner
+from subscripts import masscrop
+from subscripts import massrenamer
+from subscripts import lighten
+from subscripts import flattenopacity
+from subscripts import retainmain
+from subscripts import timelapse
+from subscripts import imagestitch
+from subscripts import txt
+from subscripts import pixels
+from subscripts import filenameprint
+from subscripts import jpgcompress
 
 # validCommands = ["replacecolor", "autocrop", "resizer", "pdf2img", "img2pdf","gifmaker",
 #  "boxbackup", "boxrestore","separator","outliner","divider","masscrop","massrenamer","lighten",
