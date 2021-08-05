@@ -28,13 +28,3 @@ def start():
 
 	imageio.mimwrite(str(image_path) + "\\" + filename, image_list, loop= _loop, fps= _fps)
 	print("    GIF created! Optimize at this url:{}".format("https://ezgif.com/optimize"))
-
-# time.sleep(5)
-
-# create a new one
-# newP = os.getcwd() + "\\" + filename
-# print(newP)
-# optimize(newP)
-
-# print("GIF success!")
-# input()
