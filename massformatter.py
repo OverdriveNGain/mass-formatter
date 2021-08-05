@@ -78,11 +78,6 @@ commandMap = {
 			"execute": lambda : separator.start(),
 			"desciption": "Seperates multiple opaque blobs that exists within a single image into multiple images.",
 		},
-	"outliner": 
-		{
-			"execute": lambda : outliner.start(),
-			"desciption": "",
-		},
 	"divider": 
 		{
 			"execute": lambda : divider.start(),
