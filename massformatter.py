@@ -67,9 +67,8 @@ commandMap = {
 	"jpgcompress": lambda : jpgcompress.start(),
 	"pdfstitch": lambda : pdf2img.pdfstitch(),
 	"help": lambda : helpAction(commandMap),
-
 }
-
+print("Version 1.0. Type 'help' for available commands")
 def helpAction(commandMap):
 	print("    The valid commands are:")
 	for c in commandMap:
