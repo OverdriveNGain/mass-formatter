@@ -36,117 +36,117 @@ commandMap = {
 	"replacecolor": 
 		{
 			"execute": lambda : replacecolor.start(),
-			"desciption": "Replaces all occurances of a certin color within an image by another color.",
+			"description": "Replaces all occurances of a certin color within an image by another color.",
 		},
 	"autocrop": 
 		{
 			"execute": lambda : autocrop.start(),
-			"desciption": "Automatically removes transparent margins around opaque blobs in a png image through cropping.",
+			"description": "Automatically removes transparent margins around opaque blobs in a png image through cropping.",
 		},
 	"resizer": 
 		{
 			"execute": lambda : resizer.start(),
-			"desciption": "Resizes multiple images in bulk.",
+			"description": "Resizes multiple images in bulk.",
 		},
 	"pdf2img": 
 		{
 			"execute": lambda : pdf2img.pdf2img(),
-			"desciption": "Creates image files from the pages of a PDF file.",
+			"description": "Creates image files from the pages of a PDF file.",
 		},
 	"img2pdf": 
 		{
 			"execute": lambda : pdf2img.img2pdf(),
-			"desciption": "Creates a pdf file from multiple image files.",
+			"description": "Creates a pdf file from multiple image files.",
 		},
 	"gifmaker": 
 		{
 			"execute": lambda : gifmaker.start(),
-			"desciption": "Creates a gif image from multiple image files.",
+			"description": "Creates a gif image from multiple image files.",
 		},
 	"boxbackup": 
 		{
 			"execute": lambda : boxbackup.backup(),
-			"desciption": "Performs a backup on the files currently in the box folder",
+			"description": "Performs a backup on the files currently in the box folder",
 		},
 	"boxrestore": 
 		{
 			"execute": lambda : boxbackup.restore(),
-			"desciption": "Restores the box folder with a previous box backup.",
+			"description": "Restores the box folder with a previous box backup.",
 		},
 	"separator": 
 		{
 			"execute": lambda : separator.start(),
-			"desciption": "Seperates multiple opaque blobs that exists within a single image into multiple images.",
+			"description": "Seperates multiple opaque blobs that exists within a single image into multiple images.",
 		},
 	"divider": 
 		{
 			"execute": lambda : divider.start(),
-			"desciption": "Slices an image into several smaller images.",
+			"description": "Slices an image into several smaller images.",
 		},
 	"masscrop": 
 		{
 			"execute": lambda : masscrop.start(),
-			"desciption": "Crops all images by certain crop values.",
+			"description": "Crops all images by certain crop values.",
 		},
 	"massrenamer": 
 		{
 			"execute": lambda : massrenamer.start(),
-			"desciption": "Renames files by a set filename and a set iteration value.",
+			"description": "Renames files by a set filename and a set iteration value.",
 		},
 	"lighten": 
 		{
 			"execute": lambda : lighten.start(),
-			"desciption": "Simple lightening of image using linear interpolation of RGB values.",
+			"description": "Simple lightening of image using linear interpolation of RGB values.",
 		},
 	"flattenopacity": 
 		{
 			"execute": lambda : flattenopacity.start(),
-			"desciption": "Manipulates the alpha values of each pixel of an image by assigning either a value of 0 or a value of 255, depending on a certain threshold.",
+			"description": "Manipulates the alpha values of each pixel of an image by assigning either a value of 0 or a value of 255, depending on a certain threshold.",
 		},
 	"retainmain": 
 		{
 			"execute": lambda : retainmain.start(),
-			"desciption": "Isolates the biggest non-opaque blob of pixels from other blobs within the same image.",
+			"description": "Isolates the biggest non-opaque blob of pixels from other blobs within the same image.",
 		},
 	"timelapse": 
 		{
 			"execute": lambda : timelapse.start(),
-			"desciption": "Takes screenshots of your computer screen with a set periodic time.",
+			"description": "Takes screenshots of your computer screen with a set periodic time.",
 		},
 	"imagestitch": 
 		{
 			"execute": lambda : imagestitch.start(),
-			"desciption": "Creates an .avi video file from a multiple images.",
+			"description": "Creates an .avi video file from a multiple images.",
 		},
 	"boxclear": 
 		{
 			"execute": lambda : boxbackup.clear(),
-			"desciption": "Clears box folder.",
+			"description": "Clears box folder.",
 		},
 	"txt": 
 		{
 			"execute": lambda : txt.start(),
-			"desciption": "Provides functions for bulk manipulation of text.",
+			"description": "Provides functions for bulk manipulation of text.",
 		},
 	"filenameprint": 
 		{
 			"execute": lambda : filenameprint.start(),
-			"desciption": "Lists out file names with optional prefix and suffix strings.",
+			"description": "Lists out file names with optional prefix and suffix strings.",
 		},
 	"jpgcompress": 
 		{
 			"execute": lambda : jpgcompress.start(),
-			"desciption": "Compresses image files into jpg files with variable quality.",
+			"description": "Compresses image files into jpg files with variable quality.",
 		},
 	"pdfstitch": 
 		{
 			"execute": lambda : pdf2img.pdfstitch(),
-			"desciption": "Combines multiple pdf files into a single pdf file.",
+			"description": "Combines multiple pdf files into a single pdf file.",
 		},
 	"help": 
 		{
 			"execute": lambda : helpAction(commandMap),
-			"desciption": "Lists out the available commands.",
+			"description": "Lists out the available commands.",
 		},
 }
 print("Version 1.0. Type 'help' for available commands")
