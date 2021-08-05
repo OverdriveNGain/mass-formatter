@@ -6,7 +6,6 @@ from subscripts import gifmaker
 from subscripts import boxbackup
 from subscripts import separator
 from subscripts import divider
-from subscripts import outliner
 from subscripts import masscrop
 from subscripts import massrenamer
 from subscripts import lighten
@@ -154,6 +153,7 @@ def helpAction(commandMap):
 	print("    The valid commands are:")
 	for c in commandMap:
 		print("    - " + c)
+		print("    - " + commandMap[c]["description"])
 
 while True:
 	newCommand = input("\nListening:")
