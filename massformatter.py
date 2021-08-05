@@ -147,21 +147,26 @@ commandMap = {
 			"execute": lambda : helpAction(commandMap),
 			"description": "Lists out the available commands.",
 		},
+	"quit":
+		{
+			"description": "Quits the program"
+		}
 }
-print("Version 1.0. Type 'help' for available commands")
+print("Version 1.0. Type 'help' for available commands\n")
 def helpAction(commandMap):
-	print("    The valid commands are:")
+	print("    The valid commands are:\n")
 	for c in commandMap:
-		print("    - " + c)
-		print("    - " + commandMap[c]["description"])
+		print("    " + c)
+		print("        - " + commandMap[c]["description"] + "\n")
 
 while True:
-	newCommand = input("\nListening:")
+	newCommand = input("Listening:")
+	print()
 	
 	if newCommand == "quit":
 		break
 
 	try:
-		commandMap[newCommand]()
+		commandMap[newCommand]["execute"]()
 	except KeyError:
 		print("Invalid command. Enter \'help\' for a list of valid commands")
