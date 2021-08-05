@@ -19,9 +19,6 @@ from subscripts import pixels
 from subscripts import filenameprint
 from subscripts import jpgcompress
 
-# validCommands = ["replacecolor", "autocrop", "resizer", "pdf2img", "img2pdf","gifmaker",
-#  "boxbackup", "boxrestore","separator","outliner","divider","masscrop","massrenamer","lighten",
-#  "flattenopacity", "retainmain", "timelapse","imagestitch", "boxclear","txt","pixels","filenameprint","help","jpgcompress", "pdfstitch"]
 print('''
   ███    ███  █████  ███████ ███████
   ████  ████ ██   ██ ██      ██     
