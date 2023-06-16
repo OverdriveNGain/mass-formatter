@@ -94,7 +94,7 @@ def pdf2img():
 							pix.setPixel(x, y,(0, 0, 0))
 
 			pageI += 1
-			pix.writePNG(outdir + "{}_{}.{}".format(pageI,file[-3:],"png"))
+			pix.writePNG(outdir + "{}_{}.{}".format(str(pageI).zfill(5),file[-3:],"png"))
 			print("    Page {}".format(pageI - 1))
 	print ("    Done")
 

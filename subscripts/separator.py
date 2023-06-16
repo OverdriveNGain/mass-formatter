@@ -150,6 +150,7 @@ def SeperateAndExport(img, filename, autocrop):
 	#Selective Export
 	print("    Exporting...")
 	files = []
+	origfilename, fileext = filename.split(".")
 	for c in range(len(connections)):
 		if not autocrop:
 			for xi in range(x):
@@ -159,10 +160,11 @@ def SeperateAndExport(img, filename, autocrop):
 					if oMap[yi * x + xi] == c + 1:
 						a = origAlphas[yi * x + xi]
 					pix[xi,yi] = (pixel[0], pixel[1], pixel[2], a)
-			fileandpath = getcwd() + "\\box\\{}_{}".format(c,filename)
+
+			fileandpath = getcwd() + "\\box\\{}_{}.{}".format(origfilename, c, fileext)
 			img.save(fileandpath)
 			files.append(fileandpath)
-			print("    ...{} exported!".format("{}_{}".format(c,filename)))
+			print("    ...{} exported!".format("{}_{}.{}".format(origfilename, c, fileext)))
 		else:
 			d = c + 1
 			bl = lefts[d]
@@ -177,10 +179,10 @@ def SeperateAndExport(img, filename, autocrop):
 					if oMap[yi * x + xi] == d:
 						pixel = pix[xi, yi]
 						newpix[xi - bl,yi - bu] = (pixel[0], pixel[1], pixel[2], origAlphas[yi * x + xi])
-			fileandpath = getcwd() + "\\box\\{}_{}".format(c,filename)
+			fileandpath = getcwd() + "\\box\\{}_{}.{}".format(origfilename, c, fileext)
 			newimg.save(fileandpath)
 			# files.append(fileandpath)
-			print("    ...{} exported!".format("{}_{}".format(c,filename)))
+			print("    ...{} exported!".format("{}_{}.{}".format(origfilename, c, fileext)))
 def start():
 	path = getcwd()
 	indir = path + "\\box\\"

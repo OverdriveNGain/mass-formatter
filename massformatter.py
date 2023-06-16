@@ -3,6 +3,7 @@ from subscripts import autocrop
 from subscripts import resizer
 from subscripts import pdf2img
 from subscripts import gifmaker
+from subscripts import apngmaker
 from subscripts import boxbackup
 from subscripts import separator
 from subscripts import divider
@@ -16,6 +17,7 @@ from subscripts import imagestitch
 from subscripts import txt
 from subscripts import filenameprint
 from subscripts import jpgcompress
+from subscripts import blurrer
 
 print('''
   ███    ███  █████  ███████ ███████
@@ -61,6 +63,11 @@ commandMap = {
 		{
 			"execute": lambda : gifmaker.start(),
 			"description": "Creates a gif image from multiple image files.",
+		},
+	"apngmaker": 
+		{
+			"execute": lambda : apngmaker.start(),
+			"description": "Creates an animated png from multiple png files.",
 		},
 	"boxbackup": 
 		{
@@ -140,6 +147,11 @@ commandMap = {
 	"pdfstitch": 
 		{
 			"execute": lambda : pdf2img.pdfstitch(),
+			"description": "Combines multiple pdf files into a single pdf file.",
+		},
+	"blurrer": 
+		{
+			"execute": lambda : blurrer.start(),
 			"description": "Combines multiple pdf files into a single pdf file.",
 		},
 	"help": 
